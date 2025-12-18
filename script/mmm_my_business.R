@@ -364,7 +364,7 @@ print(OutputCollect)
 
 ## Compare all model one-pagers and select one that mostly reflects your business reality
 print(OutputCollect)
-select_model <- "1_518_3" # Pick one of the models from OutputCollect to proceed
+select_model <- "2_367_9" # Pick one of the models from OutputCollect to proceed
 
 #### Version >=3.7.1: JSON export and import (faster and lighter than RDS files)
 ExportedModel <- robyn_write(InputCollect, OutputCollect, select_model, export = create_files)
@@ -399,7 +399,7 @@ AllocatorCollect1 <- robyn_allocator(
   InputCollect = InputCollect,
   OutputCollect = OutputCollect,
   select_model = select_model,
-  # date_range = NULL, # Default last month as initial period
+  ate_range = last_4, # Default last month as initial period
   # total_budget = NULL, # When NULL, default is total spend in date_range
   channel_constr_low = 0.7,
   channel_constr_up = 1.5,
